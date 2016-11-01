@@ -5,11 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 require('./models/models');
+//initialize mongoose schemas
 var index = require('./routes/index');
 var api = require('./routes/api');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test_1');
 var app = express();
+var http = require('http')Server(app);
+var io = require('socket.io')(http);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
