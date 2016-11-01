@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+var post = mongoose.model('Message');
 
 router.route('/message')
 /* GET message listing. */
