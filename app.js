@@ -11,8 +11,11 @@ var api = require('./routes/api');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test_1');
 var app = express();
-var http = require('http')Server(app);
-var io = require('socket.io')(http);
+//initialize socket.io
+// var http = require('http')
+// http.Server(app);
+// var io = require('socket.io')(http);
+// http.listen(3000);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
