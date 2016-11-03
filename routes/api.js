@@ -7,6 +7,9 @@ router.route('/message')
 /* GET message listing. */
   .get(function(req, res, next) {
     res.send('respond with message list');
+  })
+  .post(function(req, res, next) {
+    res.send('post a message');
   });
   
 router.route('/users')
