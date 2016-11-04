@@ -1,0 +1,64 @@
+
+/*font for dev*/
+@font-face {
+  font-family: oswaldn;
+  src: url(../fonts/OswaldesqueLight.ttf);
+}
+@font-face {
+  font-family: oswaldb;
+  src: url(../fonts/OswaldesqueBold.ttf);
+}
+
+
+/*==================================================================*/
+
+
+
+.main-head{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/hero-min.jpg") top center;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+header{
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+ul{
+  margin-bottom:0px;
+}
+.head-nav ul li{
+  display: inline-block;
+  padding: 40px 15px 10px 15px;
+  color: white;
+  letter-spacing: 6px;
+  transition: all 0.3s cubic-bezier(1, -0.57, 0.4, -0.16);
+  border-bottom: 1px solid transparent;
+  font-family: oswaldn;
+}
+.head-nav ul li:hover{
+  border-bottom: 1px solid white;
+}
+.clear{
+  clear: both;
+}
+div.logo-holder{
+  position: relative;
+  width: 100%;
+  padding-top: 50%;
+}
+div.logo-holder img{
+  width: 40%;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 20px;
+  bottom: 0;
+  object-fit: contain
+
+}
