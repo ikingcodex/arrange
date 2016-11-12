@@ -145,7 +145,7 @@ button {
 	left: 0;
 	z-index: 1000;
 	opacity: 0;
-	background: rgba(143,27,15,0.8);
+	background: rgba(45, 64, 78, 0.7);
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -159,7 +159,7 @@ button {
 /* Content styles */
 .md-content {
 	color: #fff;
-	background: #e74c3c;
+	background: #2d404e;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
@@ -235,7 +235,7 @@ button {
 }
 
 .md-show.md-effect-12 ~ .md-overlay {
-	background: #e74c3c;
+	background: #2D404E;
 }
 
 .md-effect-12 .md-content h3,
@@ -249,6 +249,135 @@ button {
 	-ms-transform: scale(1);
 	transform: scale(1);
 	opacity: 1;
+}
+/*====================================================*/
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	/*max-width: 350px;*/
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+.madoka_input_label{
+  font-size: 15px;
+  top: -13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 150%;
+}
+/* Minoru */
+.input__field--minoru {
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 0px 0px 2px transparent;
+	color: #eca29b;
+	-webkit-transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s;
+}
+
+.input__label--minoru {
+	padding: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.input__label--minoru::after {
+	content: '';
+  	position: absolute;
+  	top: 0;
+  	z-index: -1;
+  	width: 100%;
+  	height: 4em;
+	box-shadow: 0px 0px 0px 0px;
+	color: rgba(199,152,157, 0.6);
+}
+
+.input__field--minoru:focus {
+	box-shadow: 0px 0px 0px 2px #eca29b;
+}
+
+.input__field--minoru:focus + .input__label--minoru {
+	pointer-events: none;
+}
+
+.input__field--minoru:focus + .input__label--minoru::after {
+	-webkit-animation: anim-shadow 0.3s forwards;
+	animation: anim-shadow 0.3s forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+    	opacity: 0;
+	}
+}
+
+@keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+    	opacity: 0;
+	}
+}
+
+.input__label-content--minoru {
+	padding: 0.75em 0.15em;
 }
 /*=================================================*/
 div.mhl{
@@ -275,7 +404,7 @@ div.mhl img{
     0% {
       opacity: 0;
       width:20px;
-      top:-50px;
+      top:-60px;
 
     }
   10% {
@@ -283,12 +412,12 @@ div.mhl img{
 
     }
     90%{
-      top:10px;
+      top:0px;
       width: 40px;
     }
     100%{
       opacity: 0;
-      top:-50px;
+      top:-60px;
     }
 }
 
@@ -308,4 +437,143 @@ div.mhl img{
 section.about-us{
   height:auto;
   width: 100%;
+}
+
+
+/* ====explore-page==== */
+
+.explore{
+  background-color: #282C37;
+}
+/* Madoka */
+.input--madoka {
+	margin: 1.1em;
+}
+
+.input__field--madoka {
+	width: 100%;
+	background: transparent;
+	color: #7A7593;
+}
+
+.input__label--madoka {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: #7A7593;
+	text-align: left;
+	cursor: text;
+}
+
+.input__label-content--madoka {
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.graphic--madoka {
+	-webkit-transform: scale3d(1, -1, 1);
+	transform: scale3d(1, -1, 1);
+	-webkit-transition: stroke-dashoffset 0.3s;
+	transition: stroke-dashoffset 0.3s;
+	pointer-events: none;
+
+	stroke: #7A7593;
+	stroke-width: 4px;
+	stroke-dasharray: 962;
+	stroke-dashoffset: 558;
+}
+
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+	cursor: default;
+	pointer-events: none;
+}
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input--filled .graphic--madoka {
+	stroke-dashoffset: 0;
+}
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled .input__label-content--madoka {
+	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+}
+.madoka_form{
+  width: 50%;
+  margin: auto;
+}
+.disc-pe{
+  font-family: oswaldn;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  margin: 0;
+}
+.explore-content{
+  width: 100%;
+  height: auto;
+  min-height: 60vh;
+  /*background-color: crimson;*/
+  padding: 20px 40px;
+  position: relative;
+  top: 30px;
+}
+.discover-image-holder{
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.discover-image-holder img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom:0;
+  object-fit: cover;
+}
+.discover-user-username p a{
+  letter-spacing: 2px;
+  text-align: center;
+  color: black;
+  position: relative;
+}
+.user{
+  margin-bottom: 10px;
+  padding: 20px 40px !important;
+  transition: all 0.6s ease-in-out;
+}
+.user:hover{
+  box-shadow: 2px 2px 15px #8080804d;
+}
+
+/* ====profile-page==== */
+.profile-pee{
+  top: -20px;
+  font-family: oswaldb;
+  margin-bottom: 20px;
+}
+.profile-content{
+  padding: 10px 40px;
+  margin: 20px 0px;
+  position: relative;
+  top: 20px;
+}
+.profile-image{
+
+}
+.profile-image img{
+  border-radius: 50%;
+  left: 40px;
+  top: 20px
+}
+.profile-content-stats{
+  padding: 35px;
+  font-family:  verdana;
+  letter-spacing: 5px;
 }

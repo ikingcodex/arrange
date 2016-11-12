@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head ng-app="arrange">
-    <title><%= title %> Meetup</title>
+  <head>
+    <meta charset="utf-8">
+    <title>Explore <%= title %></title>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,30 +18,85 @@
     <script src="/javascripts/jquery.tickertype.js"></script>
   </head>
   <body>
-    <div class="main-head">
-      <header>
-        <div class="row">
-          <div class="col-sm-2 col-xs-6">
-            <div class="logo-holder">
-              <a href="/">
-                <img src="../images/Chat2.png" alt="site-logo" />
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-10 col-xs-6 text-right">
-            <nav class="head-nav">
-              <ul>
-                <a href="/explore/"><li class="discover"><span><img src="../images/compass.png" alt="discover logo" /></span>explore</li></a>
-                <li class="md-trigger" data-modal="modal-12">Sign-up</li></a>
-                <li class="md-trigger" data-modal="modal-2">Log-in</li></a>
-              </ul>
-            </nav>
+    <header class="explore">
+      <div class="row">
+        <div class="col-sm-2 col-xs-6">
+          <div class="logo-holder">
+            <a href="/">
+              <img src="../images/Chat2.png" alt="site-logo" />
+            </a>
           </div>
         </div>
-        <div class="clear"></div>
-      </header>
-
-
+        <div class="col-sm-10 col-xs-6 text-right">
+          <nav class="head-nav">
+            <ul>
+              <li class="md-trigger" data-modal="modal-12">Sign-up</li></a>
+              <li class="md-trigger" data-modal="modal-2">Log-in</li></a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </header>
+    <div class="search-bar">
+      <div class="col-sm-12">
+        <form class="madoka_form" action="index.html" method="post">
+          <span class="input input--madoka">
+  					<input class="input__field input__field--madoka" type="text" id="input-31" />
+  					<label class="input__label input__label--madoka" for="input-31">
+  						<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+  							<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+  						</svg>
+  						<span class="input__label-content input__label-content--madoka madoka_input_label">Search</span>
+  					</label>
+  				</span>
+        </form>
+      </div>
+    </div>
+    <h1 class="disc-pe">Discover People home or abroad</h1>
+    <div class="explore-content">
+      <div class="col-sm-3 user">
+        <div class="discover-image-holder">
+          <img src="../images/profilem.jpg" alt="" />
+        </div>
+        <div class="discover-user-username">
+          <p><a href="/megan_00/">@megan_00</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 user">
+        <div class="discover-image-holder">
+          <img src="../images/girl1.jpg" alt="" />
+        </div>
+        <div class="discover-user-username">
+          <p><a href="/lorem_44/">@lorem_44</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 user">
+        <div class="discover-image-holder">
+          <img src="../images/girl2.jpg" alt="" />
+        </div>
+        <div class="discover-user-username">
+          <p><a href="/ipsum_44/">@ipsum_44</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 user">
+        <div class="discover-image-holder">
+          <img src="../images/girl3.jpg" alt="" />
+        </div>
+        <div class="discover-user-username">
+          <p><a href="/dolor_44/">@dolor_44</a></p>
+        </div>
+      </div>
+      <div class="col-sm-3 user">
+        <div class="discover-image-holder">
+          <img src="../images/girl4.jpg" alt="" />
+        </div>
+        <div class="discover-user-username">
+          <p><a href="/sit_44/">@sit_44</a></p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
       <div class="md-modal md-effect-12" id="modal-12">
         <div class="md-content">
           <h3>Sign-up Modal</h3>
@@ -100,28 +156,42 @@
         </div>
       </div>
     	<div class="md-overlay"></div><!-- the overlay element -->
-
-      <div class="main-head-content">
-        <div class="col-sm-5 mhl col-xs-8">
-          <img src="../images/chat.png" alt="main page image" />
-        </div>
-        <div id="ticker-area" alt="1">
-          <ul>
-            <li>Connectivity just got better...</li>
-            <li>Meet friends home and abroad...</li>
-            <li>Join <span style="font-family:oswaldb">Arrange</span> today<strong>!</strong></li>
-          </ul>
-        </div>
-        <div class="chev-arrow">
-          <img src="../images/down-chevron-2.png" alt="down arrow" />
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-    <section class="about-us">
-
-    </section>
     <footer></footer>
+    <script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
     <script src="../javascripts/classie.js"></script>
 		<script src="../javascripts/modalEffects.js"></script>
   </body>
